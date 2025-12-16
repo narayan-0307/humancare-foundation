@@ -1,13 +1,27 @@
 .contact-section {
   width: 100%;
-  padding: 60px 20px;
-background-color: #f9fafb;
+  padding: 25px 20px;
+  background-color: #f9fafb;
   text-align: center;
 }
 
-.form-group{
-      text-align: left;
+.contact-heading-container {
+  background: var(--blue);
+  padding: 5px 4px;
+  width: 100%;
+}
 
+.contact-section-title {
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.form-group {
+  text-align: left;
 }
 .contact-top-btn .get-btn {
   padding: 10px 22px;
@@ -42,7 +56,7 @@ background-color: #f9fafb;
   gap: 30px;
   max-width: 1200px;
   margin: 50px auto;
-  align-items: stretch;   /* ✨ BOTH SIDES SAME HEIGHT */
+  align-items: stretch; /* ✨ BOTH SIDES SAME HEIGHT */
 }
 
 .contact-left {
@@ -70,9 +84,15 @@ background-color: #f9fafb;
   color: #fff;
 }
 
-.red { background: #e6233b; }
-.blue { background: #0061ff; }
-.purple { background: #8e2de2; }
+.red {
+  background: #e6233b;
+}
+.blue {
+  background: #0061ff;
+}
+.purple {
+  background: #8e2de2;
+}
 
 .info-card h4 {
   margin-top: 15px;
@@ -148,7 +168,6 @@ textarea {
   }
 }
 
-
 .contact-title {
   font-size: 36px;
   font-weight: bold;
@@ -167,6 +186,5 @@ textarea {
   max-width: 600px;
   margin: auto;
   line-height: 1.7;
-    color: #666;
-
+  color: #666;
 }

@@ -3,6 +3,7 @@ import Statestics from '../component/Statestics';
 import Impactimg from "../assets/about.jpg";
 import Contact from "../component/Contact";
 import Banner from "../assets/about.jpg";
+import ImpactBanner from "../assets/our-impact-banner.jpg";
 
 export default function Impact() {
   return (
@@ -21,7 +22,7 @@ export default function Impact() {
 
     {/* RIGHT IMAGE */}
     <div className="impact-hero-image">
-      <img src={Banner} alt="Our Impact" />
+      <img src={ImpactBanner} alt="Our Impact" />
     </div>
 
   </div>

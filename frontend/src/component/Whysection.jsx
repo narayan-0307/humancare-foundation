@@ -20,7 +20,8 @@ const reasons = [
   {
     icon: Users,
     title: "Medical Education & Digital Learning",
-    description:"Access to medical awareness programs, Medical education, Nursing education, digital literacy, and student guidance, empowering learners with knowledge that builds both careers and communities.",
+    description:
+      "Access to medical awareness programs, Medical education, Nursing education, digital literacy, and student guidance, empowering learners with knowledge that builds both careers and communities.",
     button: "Explore",
   },
   {
@@ -46,18 +47,19 @@ const reasons = [
   },
 ];
 
-
 export default function WhySection() {
   return (
     <section id="why-choose-us" className="why-section">
+      <div className="feature-heading-container">
+        <h2 className="feature-sub-title">Featured Programs</h2>
+      </div>
       <div className="why-container">
-
         <div className="why-header">
-          <h2>Featured Programs
-</h2>
-          <div className="why-line"></div>
+          {/* <div className="why-line"></div> */}
           <p>
-We are committed to compassion, transparency, and meaningful impact transforming lives through healthcare, medical education, and community well-being.
+            We are committed to compassion, transparency, and meaningful impact
+            transforming lives through healthcare, medical education, and
+            community well-being.
           </p>
         </div>
 
@@ -92,4 +94,3 @@ We are committed to compassion, transparency, and meaningful impact transforming
     </section>
   );
 }
-

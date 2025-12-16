@@ -1,0 +1,720 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #c41e3a;
+  --secondary-color: #1a237e;
+  --dark-navy: #0a1128;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+  --text-dark: #2c3e50;
+  --text-light: #6c757d;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.second-opinion-container {
+  min-height: 100vh;
+}
+
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    var(--dark-navy) 0%,
+    var(--secondary-color) 100%
+  );
+  color: var(--white);
+  padding: 5rem 2rem;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  animation: slideInLeft 0.8s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  animation: slideInLeft 0.8s ease 0.2s both;
+}
+
+.hero-image {
+  animation: slideInRight 0.8s ease 0.3s both;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.hands-heart {
+  font-size: 6rem;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hands-heart img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section 1: Why Consider a Second Opinion */
+.why-section {
+  background: #f5f5f5;
+  padding: 4rem 2rem;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.why-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.why-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.why-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+}
+
+/* Section 2: Benefits of Seeking a Second Opinion */
+.benefits-section {
+  background: #f9f9f9;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.benefits-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.benefits-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.benefits-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.benefit-card {
+  /* background: white; */
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+   */
+  border: 1px solid blue;
+}
+
+.benefit-image {
+  width: 280px;
+  min-width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.benefit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefit-content {
+  text-align: left;
+  padding-top: 1rem;
+}
+
+.benefit-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.benefit-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Section 3: When to Seek a Second Opinion */
+.when-section {
+  background: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.when-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.when-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #666;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.when-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.when-card {
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.when-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.when-card-beige {
+  background: #fef6e8;
+}
+
+.when-card-beige:hover {
+  background: linear-gradient(135deg, #fef6e8 0%, #ffedc8 100%);
+}
+
+.when-card-blue {
+  background: #e8f2f7;
+}
+
+.when-card-blue:hover {
+  background: linear-gradient(135deg, #e8f2f7 0%, #c8e6f5 100%);
+}
+
+.when-card-light {
+  background: #fef9f3;
+}
+
+.when-card-light:hover {
+  background: linear-gradient(135deg, #fef9f3 0%, #ffe8d3 100%);
+}
+
+.when-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.when-card:hover .when-icon {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.when-icon-orange {
+  color: #ff6b35;
+}
+
+.when-card:hover .when-icon-orange {
+  background: #ff6b35;
+  color: white;
+}
+
+.when-icon-green {
+  color: #00a878;
+}
+
+.when-card:hover .when-icon-green {
+  background: #00a878;
+  color: white;
+}
+
+.when-icon-blue {
+  color: #4a90e2;
+}
+
+.when-card:hover .when-icon-blue {
+  background: #4a90e2;
+  color: white;
+}
+
+.when-icon svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.when-card:hover .when-icon svg {
+  transform: scale(1.1);
+}
+
+.when-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.when-card-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .why-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .why-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .when-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .why-title,
+  .benefits-title,
+  .when-title {
+    font-size: 1.8rem;
+  }
+
+  .benefit-card {
+    flex-direction: column;
+  }
+
+  .benefit-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .benefit-content {
+    text-align: center;
+  }
+}
+
+/* Choose & Consultation Sections */
+.choose-section,
+.consult-section {
+  /* background: linear-gradient(180deg, #f7fcfb 0%, #ffffff 100%); */
+  padding: 3.5rem 2rem;
+}
+
+.choose-inner,
+.consult-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* background: #fff; */
+  border-radius: 18px;
+  padding: 2rem;
+  /* box-shadow: 0 10px 30px rgba(10, 40, 40, 0.06); */
+  border: 1px solid black;
+}
+
+.choose-inner {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.choose-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.choose-title {
+  font-size: 2.4rem;
+  color: #0b3b3f;
+  margin-bottom: 1rem;
+}
+
+.choose-item {
+  padding-bottom: 1rem;
+}
+
+.choose-list {
+  list-style: none;
+  counter-reset: choose-counter;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.choose-list li {
+  display: block;
+}
+
+.choose-list li::before {
+  counter-increment: choose-counter;
+  content: counter(choose-counter) ".";
+  font-weight: 700;
+  margin-right: 0.5rem;
+  color: #0b3b3f;
+}
+
+.choose-list strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.choose-list p {
+  margin: 0 0 0.5rem 1.5rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.consult-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.consult-title {
+  font-size: 2.4rem;
+  color: #0b3b3f;
+  margin-bottom: 0.8rem;
+}
+.consult-intro {
+  margin-bottom: 1rem;
+  color: #111;
+}
+.consult-steps {
+  margin-left: 0;
+  padding-left: 1.25rem;
+  color: #333;
+  line-height: 1.8;
+}
+.consult-steps li {
+  margin-bottom: 0.75rem;
+}
+
+.consult-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 1024px) {
+  .choose-inner,
+  .consult-inner {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .choose-image,
+  .consult-image {
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .choose-title,
+  .consult-title {
+    font-size: 1.6rem;
+  }
+  .choose-inner,
+  .consult-inner {
+    padding: 1rem;
+  }
+}
+
+/* Section animations & responsive improvements */
+:root {
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* entrance animation used across sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* apply to main section containers */
+.hero-section,
+.why-section,
+.benefits-section,
+.when-section,
+.choose-section,
+.consult-section {
+  animation: fadeInUp 0.7s var(--ease) both;
+}
+
+/* stagger children inside grids/containers for a nicer entrance */
+.hero-content > *,
+.why-container > *,
+.benefits-grid > *,
+.when-grid > *,
+.choose-inner > *,
+.consult-inner > * {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 0.6s var(--ease) both;
+}
+
+.hero-content > * {
+  animation-delay: 0.12s;
+}
+.why-container > * {
+  animation-delay: 0.14s;
+}
+.benefits-grid > * {
+  animation-delay: 0.12s;
+}
+.when-grid > * {
+  animation-delay: 0.12s;
+}
+.choose-inner > * {
+  animation-delay: 0.12s;
+}
+.consult-inner > * {
+  animation-delay: 0.12s;
+}
+
+/* make images react slightly on hover for depth (non-intrusive) */
+.hero-image img,
+.why-image img,
+.benefit-image img,
+.choose-image img,
+.consult-image img {
+  transition: transform 0.45s var(--ease), filter 0.45s var(--ease);
+}
+
+.hero-image:hover img,
+.why-image:hover img,
+.benefit-image:hover img,
+.choose-image:hover img,
+.consult-image:hover img {
+  transform: scale(1.03) translateY(-4px);
+  filter: saturate(1.03) contrast(1.02);
+}
+
+/* friendly focus state for keyboard users */
+.when-card:focus,
+.benefit-card:focus,
+.choose-item:focus {
+  outline: 3px solid rgba(0, 150, 136, 0.12);
+  outline-offset: 4px;
+}
+
+/* responsive refinements: adjust spacing and font sizes */
+@media (max-width: 1200px) {
+  .hero-content {
+    gap: 2.5rem;
+  }
+  .why-container {
+    grid-template-columns: 1fr;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    padding: 3rem 1.25rem;
+  }
+  .when-grid {
+    grid-template-columns: 1fr;
+  }
+  .when-card {
+    padding: 1.75rem 1rem;
+  }
+  .when-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .when-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+  .choose-inner,
+  .consult-inner {
+    padding: 0.75rem;
+  }
+  .benefit-card {
+    padding: 1rem;
+  }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

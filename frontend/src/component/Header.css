@@ -94,7 +94,7 @@ body {
 /* ============================
    RESPONSIVE MENU
 ============================ */
-@media (max-width: 992px) {
+@media (max-width: 1250px) {
   .mobile-menu-icon {
     display: block;
   }

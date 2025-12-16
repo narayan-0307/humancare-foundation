@@ -55,21 +55,22 @@ const faqs = [
   },
 ];
 
-
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <section className="faq-section">
+      <div className="faq-main-container">
+        <h2 className="faq-title">Everything You Need to Know</h2>
+      </div>
       <div className="faq-container">
-
         {/* HEADER */}
         <div className="faq-header">
-          <h2>Everything You Need to Know
-</h2>
-          <div className="faq-line"></div>
+          {/* <h2>Everything You Need to Know</h2> */}
+          {/* <div className="faq-line"></div> */}
           <p>
-Learn more about our work, your contributions, and the impact we create together.
+            Learn more about our work, your contributions, and the impact we
+            create together.
           </p>
         </div>
 
@@ -78,9 +79,7 @@ Learn more about our work, your contributions, and the impact we create together
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`faq-card ${
-                openIndex === index ? "faq-open" : ""
-              }`}
+              className={`faq-card ${openIndex === index ? "faq-open" : ""}`}
             >
               <button
                 className="faq-question"
@@ -88,9 +87,7 @@ Learn more about our work, your contributions, and the impact we create together
               >
                 <h3>{faq.question}</h3>
                 <ChevronDown
-                  className={`faq-icon ${
-                    openIndex === index ? "rotate" : ""
-                  }`}
+                  className={`faq-icon ${openIndex === index ? "rotate" : ""}`}
                 />
               </button>
 
@@ -104,7 +101,6 @@ Learn more about our work, your contributions, and the impact we create together
         </div>
 
         {/* CONTACT BOX */}
-        
       </div>
     </section>
   );

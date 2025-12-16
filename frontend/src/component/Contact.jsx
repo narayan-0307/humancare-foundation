@@ -7,7 +7,7 @@ export default function Contact() {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
 
   const [status, setStatus] = useState("");
@@ -20,11 +20,14 @@ export default function Contact() {
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("https://humancarefoundationtrust.org/contact.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form)
-    });
+    const res = await fetch(
+      "https://humancarefoundationtrust.org/contact.php",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      }
+    );
 
     const data = await res.json();
 
@@ -34,7 +37,7 @@ export default function Contact() {
         name: "",
         email: "",
         phone: "",
-        message: ""
+        message: "",
       });
     } else {
       setStatus("Failed to send message. Try again.");
@@ -42,100 +45,107 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact-section" id="contact">
-     
+    <section className="contact-main-section">
+      <div className="contact-heading-container">
+        <h2 className="contact-section-title">Contact Us</h2>
+      </div>
+      <div className="contact-section" id="contact">
+        {/* <h1 className="contact-title">Contact Us</h1> */}
+        {/* <div className="contact-line"></div> */}
+        <p className="contact-text">
+          Have questions or want to get involved? We'd love to hear from you.
+        </p>
 
-      <h1 className="contact-title">Contact Us</h1>
-      <div className="contact-line"></div>
-
-      <p className="contact-text">
-        Have questions or want to get involved? We'd love to hear from you.
-      </p>
-
-      <div className="contact-container">
-        {/* LEFT SIDE */}
-        <div className="contact-left">
-          <div className="info-card">
-            {/* <div className="icon-box red">
+        <div className="contact-container">
+          {/* LEFT SIDE */}
+          <div className="contact-left">
+            <div className="info-card">
+              {/* <div className="icon-box red">
               <Phone size={28} />
             </div>
             <h4>Phone</h4>
             <p>+91 9699999065</p> */}
-            <h4>Empowering health. <br/> Enhancing knowledge.</h4>
+              <h4>
+                Empowering health. <br /> Enhancing knowledge.
+              </h4>
+            </div>
+
+            <div className="info-card">
+              <div className="icon-box blue">
+                <Mail size={28} />
+              </div>
+              <h4>Email</h4>
+              <p>assist@humancarefoundationtrust.org</p>
+            </div>
+
+            <div className="info-card">
+              <div className="icon-box purple">
+                <MapPin size={28} />
+              </div>
+              <h4>Address</h4>
+              <p>
+                541/544, Dheeraj Heritage, Milan Subway, Junction, SV Rd,
+                Santacruz (West), Mumbai, Maharashtra 400054
+              </p>
+            </div>
           </div>
 
-          <div className="info-card">
-            <div className="icon-box blue">
-              <Mail size={28} />
-            </div>
-            <h4>Email</h4>
-            <p>assist@humancarefoundationtrust.org</p>
+          {/* RIGHT FORM */}
+          <div className="contact-form-box">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label>Full Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Enter Your Name"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Enter Your Email"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Phone Number *</label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Enter Your Number"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Message</label>
+                <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Tell us how we can help..."
+                  rows={5}
+                ></textarea>
+              </div>
+
+              <button className="send-btn">
+                <span>Send Message</span>
+              </button>
+
+              {status && <p className="status-msg">{status}</p>}
+            </form>
           </div>
-
-          <div className="info-card">
-            <div className="icon-box purple">
-              <MapPin size={28} />
-            </div>
-            <h4>Address</h4>
-            <p>541/544, Dheeraj Heritage, Milan Subway, Junction, SV Rd, Santacruz (West), Mumbai, Maharashtra 400054</p>
-          </div>
-        </div>
-
-        {/* RIGHT FORM */}
-        <div className="contact-form-box">
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label>Full Name *</label>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Enter Your Name"
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Email *</label>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Enter Your Email"
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Phone Number *</label>
-              <input
-                type="text"
-                name="phone"
-                value={form.phone}
-                onChange={handleChange}
-                placeholder="Enter Your Number"
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Message</label>
-              <textarea
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Tell us how we can help..."
-                rows={5}
-              ></textarea>
-            </div>
-
-            <button className="send-btn">
-              <span>Send Message</span>
-            </button>
-
-            {status && <p className="status-msg">{status}</p>}
-          </form>
         </div>
       </div>
     </section>
