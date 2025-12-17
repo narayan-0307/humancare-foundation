@@ -1,16 +1,16 @@
-import React from 'react'
-import { 
-  Stethoscope, 
-  Siren, 
-  BookOpen, 
-  Package, 
+import React from "react";
+import {
+  Stethoscope,
+  Siren,
+  BookOpen,
+  Package,
   Megaphone,
-  Zap, 
-  Shield, 
+  Zap,
+  Shield,
   CheckCircle,
   Heart,
   Eye,
-  Target
+  Target,
 } from "lucide-react";
 import "./Servicesection.css";
 const services = [
@@ -38,7 +38,6 @@ const services = [
     description:
       "We work to uplift remote and underserved regions by improving health awareness, access to emergency support, and community-level preparedness, ensuring that quality healthcare reaches even the most distant villages with dignity and care.",
   },
-
 ];
 
 function Servicesection() {
@@ -47,11 +46,14 @@ function Servicesection() {
       <section id="whatwedo" className="services-section">
         <div className="why-container">
           <div className="why-header">
-            <h2 className='ser-head'>Our Pillars</h2>
+            <h2 className="ser-head">Our Pillars</h2>
             <div className="why-line"></div>
-            <p className='ser-para'>
-We strengthen communities through compassionate care, medical education, emergency preparedness, and rural health empowerment so that during any household or outdoor medical emergency, individuals are equipped with basic life-saving knowledge until professional help arrives.
-
+            <p className="ser-para">
+              We strengthen communities through compassionate care, medical
+              education, emergency preparedness, and rural health empowerment so
+              that during any household or outdoor medical emergency,
+              individuals are equipped with basic life-saving knowledge until
+              professional help arrives.
             </p>
           </div>
 
